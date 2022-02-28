@@ -1,0 +1,11 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "title": "Welcome poets",
+      "author": "Lucas Farmwald",
+      "likes": 20
+    }
+  ]
+ 
+}
