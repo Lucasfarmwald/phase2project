@@ -26,8 +26,18 @@ function Navbar(){
                 </NavLink>
                     </li>
                     <li>
-                <NavLink exact to='/FunnyPoems'>
+                <NavLink exact to='/Funny'>
                     Funny
+                </NavLink>
+                    </li>
+                    <li>
+                <NavLink exact to='/Post'>
+                    Post Your Own
+                </NavLink>
+                    </li>
+                    <li>
+                <NavLink exact to='/FetchYourData' >
+                    Get my posts
                 </NavLink>
                     </li>
                 </ul>
