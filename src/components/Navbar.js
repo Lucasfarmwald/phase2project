@@ -11,7 +11,7 @@ function Navbar(){
                 
                 <ul>
                     <li>
-                    <NavLink exact to='/'>
+                    <NavLink exact to='/Home'>
                     Home
                 </NavLink>
                     </li>
