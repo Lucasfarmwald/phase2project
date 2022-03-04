@@ -5,29 +5,35 @@ import {NavLink} from "react-router-dom";
 
 
 function Navbar(){
+
+const styleObject = {
+    div:{
+        background: "antiqueWhite",
+        textAlign: "left",
+        fontFamily: "Areial",
+        fontSize: "20px"
+    }
+}
+
     return(
         <nav>
-            <div className="Navbar" >
+            <div  style={styleObject.div}  className="Navbar" >
                 
-                <ul>
-                    <li>
+                <ul >
+                    <li >
                     <NavLink exact to='/Home'>
                     Home
                 </NavLink>
                     </li>
+                    
                     <li>
-                    <NavLink exact to='/Api'>
-                    Api
+                <NavLink exact to='/DogPic'>
+                    Doggy!
                 </NavLink>
                     </li>
                     <li>
-                <NavLink exact to='/LovePoems'>
-                    Love
-                </NavLink>
-                    </li>
-                    <li>
-                <NavLink exact to='/Funny'>
-                    Funny
+                <NavLink exact to='/SeeWhatOthers'>
+                    See what others are buying
                 </NavLink>
                     </li>
                     <li>

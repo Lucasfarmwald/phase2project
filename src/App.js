@@ -1,7 +1,8 @@
-import LovePoems from './components/Love';
+
 import Navbar from './components/Navbar';
-import FunnyPoems from './components/Funny';
+import DogPic from './components/Love';
 import FetchPosts from './components/FetchPosts';
+import SeeWhatOthers from './components/SeeWhatOthers';
 import Post from './components/Post';
 import FetchYourData from './components/FetchYourData';
 import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
@@ -10,21 +11,27 @@ import Home from './components/Home';
 
 
 function App() {
+
+  const styleObject = {
+    div:{
+      background: "antiqueWhite"
+    }
+  }
   return (
 
 
-    <>
+    <div style={styleObject.div} >
 
       
   <Router>
-    <div>
+    <div >
     <Navbar />
     <Switch>
-      <Route path='/Home' >
+      <Route exact path='/Home' >
         <Home />
       </Route>
-      <Route path="/LovePoems" >
-        <LovePoems />
+      <Route exact path="/DogPic" >
+        <DogPic/>
       </Route>
       <Route exact path="/Post">
         <Post />
@@ -32,7 +39,9 @@ function App() {
       <Route exact path="/FetchYourData" >
         <FetchYourData />
       </Route>
-      <Route exact path='/Funny' component={FunnyPoems} />
+      <Route exact path="/SeeWhatOthers" >
+        <SeeWhatOthers />
+      </Route>
       <Route exact path='/FetchPosts' component={FetchPosts} />
 
 
@@ -40,7 +49,7 @@ function App() {
     </Switch>
    </div>
   </Router>
-  </>
+  </div>
 )
 
 }

@@ -1,35 +1,22 @@
 {
   "posts": [
     {
-      "id": 1,
-      "title": "Welcome poets",
-      "body": "",
+      "title": "My project",
+      "body": "Hello and welcome to my project",
       "author": "Lucas Farmwald",
-      "likes": 20
-    },
-    {
-      "title": "Lucas",
-      "body": "hello there",
-      "author": "Lucas farmwald",
       "id": 2
     },
     {
-      "title": "farmwald",
-      "body": "hello my name is hannah",
-      "author": "hannah ",
+      "title": "Reminder",
+      "body": "Remember to take out trash",
+      "author": "Hannah ",
       "id": 3
     },
     {
-      "title": "hanner",
+      "title": "My ideas",
       "body": "hello there",
-      "author": "hannah farmwald",
+      "author": "Hannah",
       "id": 4
-    },
-    {
-      "title": "hanner",
-      "body": "hello there",
-      "author": "hannah farmwald",
-      "id": 5
     }
   ]
 }

@@ -8,12 +8,20 @@ const [data, setData] = useState()
 
 let styleObject = {
     div: {
-        backgroundColor:" green",
-        color:"pink",
-        border: "1px, solid red"
+        backgroundColor:"antiqueWhite",
+        color:"black",
+        border: "solid black",
+        textAlign: "center"
     }, h1:{
-        color:"blue",
-        border:"1px, solid blue"
+        color:"black",
+        fontFamily: "Areial",
+        textDecoration: "underline",
+        textAlign: "center",
+        
+    },
+    title:{
+        fontSize: "25px",
+        fontFamily: "Areial"
     }
 }
    
@@ -23,6 +31,7 @@ fetch('http://localhost:3000/posts')
 .then((posts) => setData(posts.map(post =>{
     return( <div>
             <h1>{post.author}</h1>
+            <p style={styleObject.title} >{post.title}</p>
             <p key={post.body} >{post.body}</p>
             </div>)}    
     )))
@@ -30,7 +39,7 @@ fetch('http://localhost:3000/posts')
 
     return(
         <div style={styleObject.div} >
-            <h1 style={styleObject.h1} >/ All posts /</h1>
+            <h1 style={styleObject.h1} >My notes</h1>
             {data}
         </div>
     )

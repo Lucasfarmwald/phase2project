@@ -10,9 +10,18 @@ const [formData, setFormData] = useState({
     author:""
 })
 
-//const [title, setTitle] = useState("")
-//const [body, setBody] = useState("")
-//const [author, setAuthor] = useState("")
+const styleObject = {
+    div:{
+        background: "antiqueWhite",
+        color: "black"
+    },
+    h1:{
+        color: "black",
+        textAlign: "center",
+        fontFamily: "Areial",
+        textDecoration: "underline "
+    }
+}
 
 function handleSubmit(e) {
     e.preventDefault()
@@ -21,16 +30,16 @@ function handleSubmit(e) {
         method: "POST",
         headers: {"content-type": "application/json"},
         body: JSON.stringify(formData)
-    }).then(() => {console.log("new Blog added")})
+    }).then(() => {alert("new Blog added")})
 }
  
     return(
-        <div>
-           <h1>Add your own poems!</h1>
+        <div style={styleObject.div} >
+           <h1 style={styleObject.h1} >Add notes!</h1>
             <form onSubmit={handleSubmit} >
                 <input type='text' onChange={(e) => setFormData({...formData, author: e.target.value})} value={formData.author} id="Author" name="Author" placeholder="Add Name"></input>
                 <input type="text" onChange={(e) => setFormData({...formData, title: e.target.value})} value={formData.title} id="Title" name="Title" placeholder="Add Title"></input>
-                <textarea type='text' onChange={(e) => setFormData({...formData, body: e.target.value})} value={formData.body} id="Body" name="Body"   placeholder="Start Writing!"></textarea>
+                <input type='text' onChange={(e) => setFormData({...formData, body: e.target.value})} value={formData.body} id="Body" name="Body"   placeholder="Start Writing!"></input>
                 <button type="submit" >Submit</button>
             </form>
             
