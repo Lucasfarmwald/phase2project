@@ -20,9 +20,7 @@ function App() {
   }
   return (
 
-
-    <div style={styleObject.div} >
-
+  <div style={styleObject.div} >
       
   <Router>
     <div >
@@ -44,8 +42,6 @@ function App() {
         <SeeWhatOthers />
       </Route>
       
-
-
     
     </Switch>
    </div>
