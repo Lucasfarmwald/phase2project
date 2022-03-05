@@ -12,7 +12,8 @@ const styleObject = {
         color:'black',
         background: "antiqueWhite",
         fontSize: "20px",
-        textAlign: "center"
+        textAlign: "center",
+        
     },
      h1:{
          textAlign: "center",
@@ -25,7 +26,10 @@ const styleObject = {
 
      },
      div2: {
-         background:"antiqueWhite"
+         background:"antiqueWhite",
+         width: "100vw",
+         height:"100vh"
+    
      }
 }
 

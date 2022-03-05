@@ -13,13 +13,16 @@ const [formData, setFormData] = useState({
 const styleObject = {
     div:{
         background: "antiqueWhite",
-        color: "black"
+        color: "black",
+        width: "100vw",
+        height:"100vh"
     },
     h1:{
         color: "black",
         textAlign: "center",
         fontFamily: "Areial",
-        textDecoration: "underline "
+        textDecoration: "underline",
+        fontSize:"40px"
     }
 }
 

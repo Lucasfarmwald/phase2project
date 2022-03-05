@@ -14,8 +14,15 @@ const styleObject = {
     h1:{
         fontFamily: "Arial",
         textAlign: "center",
-        textDecoration: "underline "
+        textDecoration: "underline ",
+        fontSize:"40px"
 
+    },
+    div:{
+        background:"antiqueWhite",
+        width: "100vw",
+        height:"100vh"
+    
     }
 }
 
@@ -39,7 +46,7 @@ useEffect(() => {
 
 
     return(
-        <div >
+        <div style={styleObject.div} >
         <h1 style={styleObject.h1} >House Stock Watch</h1>
         <ol>
             {data}

@@ -11,12 +11,15 @@ let styleObject = {
         backgroundColor:"antiqueWhite",
         color:"black",
         border: "solid black",
-        textAlign: "center"
+        textAlign: "center",
+        width: "100vw",
+        height:"100vh"
     }, h1:{
         color:"black",
         fontFamily: "Areial",
         textDecoration: "underline",
         textAlign: "center",
+        fontSize:"40px"
         
     },
     title:{

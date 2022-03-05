@@ -24,11 +24,10 @@ const styleObject = {
                     <NavLink exact to='/Home'>
                     Home
                 </NavLink>
-                    </li>
-                    
+                    </li> 
                     <li>
-                <NavLink exact to='/DogPic'>
-                    Doggy!
+                <NavLink exact to='/Bored'>
+                    Bored?
                 </NavLink>
                     </li>
                     <li>

@@ -1,7 +1,8 @@
 
 import Navbar from './components/Navbar';
-import DogPic from './components/Love';
-import FetchPosts from './components/FetchPosts';
+import './App.css';
+import Bored from './components/Bored';
+
 import SeeWhatOthers from './components/SeeWhatOthers';
 import Post from './components/Post';
 import FetchYourData from './components/FetchYourData';
@@ -30,8 +31,8 @@ function App() {
       <Route exact path='/Home' >
         <Home />
       </Route>
-      <Route exact path="/DogPic" >
-        <DogPic/>
+      <Route exact path="/Bored" >
+        <Bored/>
       </Route>
       <Route exact path="/Post">
         <Post />
@@ -42,7 +43,7 @@ function App() {
       <Route exact path="/SeeWhatOthers" >
         <SeeWhatOthers />
       </Route>
-      <Route exact path='/FetchPosts' component={FetchPosts} />
+      
 
 
     
