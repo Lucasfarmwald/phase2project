@@ -36,13 +36,13 @@ const styleObject = {
                 </NavLink>
                     </li>
                     <li>
-                <NavLink exact to='/Post'>
-                    Post Your Own
+                <NavLink exact to='/AddNotes'>
+                    Add a note
                 </NavLink>
                     </li>
                     <li>
-                <NavLink exact to='/FetchYourData' >
-                    Get my posts
+                <NavLink exact to='/GetMyNotes' >
+                    Get my notes
                 </NavLink>
                     </li>
                 </ul>

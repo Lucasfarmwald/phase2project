@@ -1,13 +1,13 @@
 
-import Navbar from './components/Navbar';
 import './App.css';
+import Navbar from './components/Navbar';
 import Bored from './components/Bored';
-
 import SeeWhatOthers from './components/SeeWhatOthers';
-import Post from './components/Post';
-import FetchYourData from './components/FetchYourData';
-import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+import AddNotes from './components/AddNotes';
+import GetMyNotes from './components/GetMyNotes';
 import Home from './components/Home';
+import { BrowserRouter as Router, Route, Switch} from "react-router-dom";
+
 
 
 
@@ -32,11 +32,11 @@ function App() {
       <Route exact path="/Bored" >
         <Bored/>
       </Route>
-      <Route exact path="/Post">
-        <Post />
+      <Route exact path="/AddNotes">
+        <AddNotes />
       </Route>
-      <Route exact path="/FetchYourData" >
-        <FetchYourData />
+      <Route exact path="/GetMyNotes" >
+        <GetMyNotes />
       </Route>
       <Route exact path="/SeeWhatOthers" >
         <SeeWhatOthers />

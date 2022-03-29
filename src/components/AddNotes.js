@@ -2,7 +2,7 @@ import React, {useState} from "react";
 
 
 
-function Post() {
+function AddNotes() {
 
 const [formData, setFormData] = useState({
     title:"",
@@ -50,4 +50,4 @@ function handleSubmit(e) {
     )
 }
 
-export default Post
+export default AddNotes

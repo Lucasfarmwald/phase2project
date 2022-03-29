@@ -1,7 +1,7 @@
 import React, { useState, useEffect} from "react";
 
 
-function FetchYourData() {
+function GetMyNotes() {
 
 const [data, setData] = useState()
 
@@ -34,8 +34,8 @@ fetch('http://localhost:3000/posts')
 .then((posts) => setData(posts.map(post =>{
     return( <div>
             <h1>{post.author}</h1>
-            <p style={styleObject.title} >{post.title}</p>
-            <p key={post.body} >{post.body}</p>
+            <p>{post.title}</p>
+            <p>{post.body}</p>
             </div>)}    
     )))
 },[])    
@@ -49,4 +49,4 @@ fetch('http://localhost:3000/posts')
 }
 
 
-export default FetchYourData
+export default GetMyNotes
