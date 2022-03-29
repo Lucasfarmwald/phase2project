@@ -3,7 +3,7 @@ import React, { useState, useEffect} from "react";
 
 function Home() {
 
-const [data, setData] = useState([])
+const [coins, setCoins] = useState([])
 
 const styleObject = {
     div: {
@@ -36,7 +36,7 @@ const styleObject = {
 useEffect(() => {
     fetch('https://api.wazirx.com/sapi/v1/tickers/24hr')
     .then((res) => res.json())
-    .then((items) => setData(items.map(item => {
+    .then((items) => setCoins(items.map(item => {
         return (
         <div style={styleObject.div} >
             <p>{item.baseAsset} : Bid Price:  {item.bidPrice}   Lowest Price: {item.lowPrice}</p>
@@ -50,7 +50,7 @@ useEffect(() => {
     return(
         <div style={styleObject.div2} >
             <h1 style={styleObject.h1} >Crypto</h1>
-            {data}
+            {coins}
         </div>
     )
 }

@@ -2,7 +2,7 @@ import React, {useEffect, useState} from "react";
 
 function SeeWhatOthers() {
 
-const [data, setData] = useState([])
+const [recentPurchases, setRecentPurchases] = useState([])
 
 const styleObject = {
     p: {
@@ -29,7 +29,7 @@ const styleObject = {
 useEffect(() => {
     fetch('https://house-stock-watcher-data.s3-us-west-2.amazonaws.com/data/all_transactions.json')
     .then((res) => res.json())
-    .then((data) => setData(data.map(data => {
+    .then((data) => setRecentPurchases(data.map(data => {
         return <div style={styleObject.p} >
             
                 <h1  >{data.representative}</h1> 
@@ -49,7 +49,7 @@ useEffect(() => {
         <div style={styleObject.div} >
         <h1 style={styleObject.h1} >House Stock Watch</h1>
         <ol>
-            {data}
+            {recentPurchases}
         </ol>
 
         </div>

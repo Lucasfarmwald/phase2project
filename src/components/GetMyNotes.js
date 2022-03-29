@@ -3,7 +3,7 @@ import React, { useState, useEffect} from "react";
 
 function GetMyNotes() {
 
-const [data, setData] = useState()
+const [notes, setNotes] = useState()
 
 
 let styleObject = {
@@ -31,7 +31,7 @@ let styleObject = {
 useEffect(() => {
 fetch('http://localhost:3000/posts')
 .then((res) => res.json())
-.then((posts) => setData(posts.map(post =>{
+.then((posts) => setNotes(posts.map(post =>{
     return( <div>
             <h1>{post.author}</h1>
             <p>{post.title}</p>
@@ -43,7 +43,7 @@ fetch('http://localhost:3000/posts')
     return(
         <div style={styleObject.div} >
             <h1 style={styleObject.h1} >My notes</h1>
-            {data}
+            {notes}
         </div>
     )
 }
