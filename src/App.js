@@ -1,7 +1,6 @@
 
 import './App.css';
 import Navbar from './components/Navbar';
-import Bored from './components/Bored';
 import SeeWhatOthers from './components/SeeWhatOthers';
 import AddNotes from './components/AddNotes';
 import GetMyNotes from './components/GetMyNotes';
@@ -28,9 +27,6 @@ function App() {
     <Switch>
       <Route exact path='/Home' >
         <Home />
-      </Route>
-      <Route exact path="/Bored" >
-        <Bored/>
       </Route>
       <Route exact path="/AddNotes">
         <AddNotes />

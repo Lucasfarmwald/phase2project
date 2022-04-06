@@ -29,28 +29,33 @@ const styleObject = {
          background:"antiqueWhite",
          width: "100vw",
          height:"100vh"
-    
+     },
+     p: {
+         fontSize: "30px"
      }
 }
 
 useEffect(() => {
     fetch('https://api.wazirx.com/sapi/v1/tickers/24hr')
     .then((res) => res.json())
-    .then((items) => setCoins(items.map(item => {
-        return (
-        <div style={styleObject.div} >
-            <p>{item.baseAsset} : Bid Price:  {item.bidPrice}   Lowest Price: {item.lowPrice}</p>
-            <br></br>
-            <p> Highest Price : {item.highPrice}</p>
-        </div>
-        )
-    })))
+    .then(items => setCoins(items))
 },[])
+
+const displayCoins = coins.map(coin => {
+    return(
+        <div style={styleObject.div}>
+            <h1>{coin.baseAsset}</h1>
+            <p style={styleObject.p} > Bid Price: {coin.bidPrice} Lowest Price: {coin.lowPrice}</p>
+            <br></br>
+            <p> Highest Price: {coin.highPrice}</p>
+        </div>
+    )
+})
 
     return(
         <div style={styleObject.div2} >
             <h1 style={styleObject.h1} >Crypto</h1>
-            {coins}
+            {displayCoins}
         </div>
     )
 }

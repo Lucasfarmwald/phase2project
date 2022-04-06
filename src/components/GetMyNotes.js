@@ -3,7 +3,7 @@ import React, { useState, useEffect} from "react";
 
 function GetMyNotes() {
 
-const [notes, setNotes] = useState()
+const [notes, setNotes] = useState([])
 
 
 let styleObject = {
@@ -13,37 +13,47 @@ let styleObject = {
         border: "solid black",
         textAlign: "center",
         width: "100vw",
-        height:"100vh"
+        height:"fit-content"
     }, h1:{
         color:"black",
         fontFamily: "Areial",
         textDecoration: "underline",
         textAlign: "center",
         fontSize:"40px"
-        
     },
     title:{
         fontSize: "25px",
         fontFamily: "Areial"
+    },
+    p:{
+        fontSize: "18px",
+        fontFamily: ""
+    },
+    div2:{
+        width: "100vw",
+        height: "100vw"
     }
 }
    
+
 useEffect(() => {
 fetch('http://localhost:3000/posts')
 .then((res) => res.json())
-.then((posts) => setNotes(posts.map(post =>{
-    return( <div>
-            <h1>{post.author}</h1>
-            <p>{post.title}</p>
-            <p>{post.body}</p>
-            </div>)}    
-    )))
+.then(data => setNotes(data))
 },[])    
 
+const newNotes = notes.map(note =>{ 
+    return (
+        <div style={styleObject.div}>
+            <h1 style={styleObject.title}> Title : {note.title}</h1>
+            <p style={styleObject.p}>{note.author}</p>
+            <p>{note.body}</p>
+        </div>
+)})
     return(
-        <div style={styleObject.div} >
-            <h1 style={styleObject.h1} >My notes</h1>
-            {notes}
+        <div style={styleObject.div2} >
+           <h1 style={styleObject.h1} >My notes</h1>
+           <p>{newNotes}</p>
         </div>
     )
 }

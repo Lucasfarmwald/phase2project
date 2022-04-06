@@ -15,7 +15,8 @@ const styleObject = {
         background: "antiqueWhite",
         color: "black",
         width: "100vw",
-        height:"100vh"
+        height:"100vh",
+        textAlign: "center"
     },
     h1:{
         color: "black",
@@ -30,7 +31,12 @@ const styleObject = {
 
 function handleSubmit(e) {
     e.preventDefault()
-    console.log(formData)
+    setFormData({
+        title:"",
+        body:"",
+        author: "",
+    })
+
     fetch(' http://localhost:3000/posts', {
         method: "POST",
         headers: {"content-type": "application/json"},
@@ -41,7 +47,7 @@ function handleSubmit(e) {
 
     return(
         <div style={styleObject.div} >
-           <h1 style={styleObject.h1} >Add notes!</h1>
+           <h1 style={styleObject.h1} >Add notes</h1>
             <form onSubmit={handleSubmit} >
                 <input type='text' onChange={(e) => setFormData({...formData, author: e.target.value})}  value={formData.author} id="Author" name="Author" placeholder="Add Name"></input>
                 <input type="text" onChange={(e) => setFormData({...formData, title: e.target.value})}  value={formData.title} id="Title" name="Title" placeholder="Add Title"></input>

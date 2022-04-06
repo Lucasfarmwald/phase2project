@@ -26,11 +26,6 @@ const styleObject = {
                 </NavLink>
                     </li> 
                     <li>
-                <NavLink exact to='/Bored'>
-                    Bored?
-                </NavLink>
-                    </li>
-                    <li>
                 <NavLink exact to='/SeeWhatOthers'>
                     See what others are buying
                 </NavLink>
